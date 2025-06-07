@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tailwind": "npx @tailwindcss/cli -i ./src/chapter2/input.css -o ./src/chapter2/output.css --watch",
+    "watch": "npx @tailwindcss/cli -i ./src/project1/input.css -o ./src/project1/css/output.css --watch",
     "prettier": "npx prettier --write **/*.html"
   },
   "keywords": [],
@@ -16,6 +16,7 @@
     "tailwindcss": "^4.1.8"
   },
   "devDependencies": {
+    "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.12"
   }
 }

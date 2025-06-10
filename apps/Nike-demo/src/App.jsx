@@ -1,6 +1,16 @@
+import { Nav } from './components'
 
 const App = ()=>(
-  <div className="text-lg">hello</div>
+  <>
+    
+    <Nav />
+    
+    {/* hero */}
+    <section id="hero">
+      hero
+    </section>
+
+  </>
 )
 
 export default App

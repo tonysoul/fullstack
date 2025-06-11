@@ -1,16 +1,15 @@
 import { Nav } from './components'
+import { Hero } from './sections'
 
 const App = ()=>(
-  <>
+  <main className='relative'>
     
     <Nav />
     
     {/* hero */}
-    <section id="hero">
-      hero
-    </section>
+    <Hero />
 
-  </>
+  </main>
 )
 
 export default App

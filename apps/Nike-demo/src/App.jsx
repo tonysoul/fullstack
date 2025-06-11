@@ -1,5 +1,5 @@
 import { Nav } from './components'
-import { Hero } from './sections'
+import { Hero, PopularProducts } from './sections'
 
 const App = ()=>(
   <main className='relative'>
@@ -8,6 +8,9 @@ const App = ()=>(
     
     {/* hero */}
     <Hero />
+
+    {/* Popular Products */}
+    <PopularProducts />
 
   </main>
 )

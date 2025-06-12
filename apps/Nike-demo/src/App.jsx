@@ -4,6 +4,7 @@ import {
   Hero,
   PopularProducts,
   Services,
+  SignUp,
   SpecialOffer,
   SuperQuality,
 } from "./sections";
@@ -29,6 +30,9 @@ const App = () => (
 
     {/* Customers */}
     <Customers />
+
+    {/* Sign Up */}
+    <SignUp />
   </main>
 );
 

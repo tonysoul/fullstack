@@ -1,5 +1,6 @@
 import { Nav } from "./components";
 import {
+  Customers,
   Hero,
   PopularProducts,
   Services,
@@ -25,6 +26,9 @@ const App = () => (
 
     {/* SpecialOffer */}
     <SpecialOffer />
+
+    {/* Customers */}
+    <Customers />
   </main>
 );
 

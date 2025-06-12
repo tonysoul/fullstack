@@ -1,5 +1,11 @@
 import { Nav } from "./components";
-import { Hero, PopularProducts, Services, SuperQuality } from "./sections";
+import {
+  Hero,
+  PopularProducts,
+  Services,
+  SpecialOffer,
+  SuperQuality,
+} from "./sections";
 
 const App = () => (
   <main className="relative">
@@ -16,6 +22,9 @@ const App = () => (
 
     {/* Services */}
     <Services />
+
+    {/* SpecialOffer */}
+    <SpecialOffer />
   </main>
 );
 

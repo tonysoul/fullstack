@@ -12,7 +12,7 @@ const Footer = () => {
                 <img width={150} height={46} src={footerLogo} alt="logo" />
               </a>
               <p className="mt-6 max-w-sm text-base">
-                Get shoes ready for the new term at your nearest Nike store.
+                Get shoes ready for1 the new term at your nearest Nike store.
                 Find Your perfect Size In Store. Get Rewards
               </p>
               <div className="mt-10 flex gap-4">

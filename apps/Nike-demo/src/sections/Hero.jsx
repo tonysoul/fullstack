@@ -1,14 +1,18 @@
+import { useState } from "react";
 import { arrowRight } from "../assets/icons";
-import {
-  bigShoe1,
-  thumbnailShoe1,
-  thumbnailShoe2,
-  thumbnailShoe3,
-} from "../assets/images";
+import { bigShoe1 } from "../assets/images";
 import { Button } from "../components";
-import { statistics } from "../constants";
+import { shoes, statistics } from "../constants";
 
 const Hero = () => {
+  const [bigShoe, setBigShoe] = useState(bigShoe1);
+
+  const handleClick = (item) => {
+    if (bigShoe !== item.bigShoe) {
+      setBigShoe(item.bigShoe);
+    }
+  };
+
   return (
     <section id="hero">
       <div className="max-container">
@@ -45,24 +49,32 @@ const Hero = () => {
           <div className="bg-hero flex flex-1 flex-col items-center justify-center space-y-5 bg-purple-50 bg-cover bg-center max-xl:mt-10 max-xl:space-y-10 max-xl:py-40 xl:min-h-screen">
             <img
               className="relative object-contain"
-              src={bigShoe1}
+              src={bigShoe}
               width={610}
               height={502}
               alt=""
             />
             <div className="flex gap-6 max-sm:px-6">
-              <div className="border-coral-red bg-card rounded-xl border-2 bg-cover bg-center hover:cursor-pointer max-sm:flex-1">
-                <div className="flex items-center justify-center p-4">
-                  <img
-                    src={thumbnailShoe1}
-                    alt=""
-                    className="object-contain"
-                    width={127}
-                    height={103.34}
-                  />
+              {shoes.map((item) => (
+                <div
+                  className={`${bigShoe === item.bigShoe ? "border-coral-red" : "border-transparent"} bg-card rounded-xl border-2 bg-cover bg-center hover:cursor-pointer max-sm:flex-1`}
+                >
+                  <div className="flex items-center justify-center p-4">
+                    <img
+                      src={item.thumbnail}
+                      alt=""
+                      className="object-contain"
+                      width={127}
+                      height={103.34}
+                      onClick={() => {
+                        handleClick(item);
+                      }}
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className="bg-card rounded-xl border-2 border-transparent bg-cover bg-center hover:cursor-pointer max-sm:flex-1">
+              ))}
+
+              {/* <div className="bg-card rounded-xl border-2 border-transparent bg-cover bg-center hover:cursor-pointer max-sm:flex-1">
                 <div className="flex items-center justify-center p-4">
                   <img
                     src={thumbnailShoe2}
@@ -83,7 +95,7 @@ const Hero = () => {
                     height={103.34}
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

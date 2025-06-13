@@ -1,6 +1,7 @@
 import { Nav } from "./components";
 import {
   Customers,
+  Footer,
   Hero,
   PopularProducts,
   Services,
@@ -33,6 +34,9 @@ const App = () => (
 
     {/* Sign Up */}
     <SignUp />
+
+    {/* Footer */}
+    <Footer />
   </main>
 );
 

@@ -12,12 +12,12 @@ const Hero = () => {
   return (
     <section id="hero">
       <div className="max-container">
-        <div className="flex min-h-screen flex-col justify-between px-6 xl:lg:flex-row">
-          <div className="flex flex-col pt-28 lg:w-full xl:w-1/2">
+        <div className="flex flex-col justify-between xl:flex-row">
+          <div className="flex flex-col px-16 pt-28 max-sm:px-8 xl:min-h-screen xl:w-1/2">
             <p className="text-coral-red font-montserrat mb-10 text-xl">
               Our Summer collections
             </p>
-            <h1 className="mb-6 text-8xl leading-[1.2] font-bold">
+            <h1 className="mb-6 text-[min(100vw,70px)] leading-[1.2] font-bold">
               <span className="relative z-10 pr-10 xl:bg-white xl:whitespace-nowrap">
                 The New Arrival
               </span>
@@ -31,7 +31,7 @@ const Hero = () => {
             <div>
               <Button label="Shop now" iconUrl={arrowRight} />
             </div>
-            <div className="mt-20 flex items-start justify-start gap-16">
+            <div className="mt-20 flex items-start justify-start gap-10 lg:gap-16">
               {statistics.map((item) => (
                 <div key={item.label}>
                   <p className="text-4xl font-bold">{item.value}</p>
@@ -42,7 +42,7 @@ const Hero = () => {
               ))}
             </div>
           </div>
-          <div className="bg-hero flex flex-1 flex-col items-center justify-center space-y-5 bg-purple-50 bg-cover bg-center">
+          <div className="bg-hero flex flex-1 flex-col items-center justify-center space-y-5 bg-purple-50 bg-cover bg-center max-xl:mt-10 max-xl:space-y-10 max-xl:py-40 xl:min-h-screen">
             <img
               className="relative object-contain"
               src={bigShoe1}
@@ -50,20 +50,38 @@ const Hero = () => {
               height={502}
               alt=""
             />
-            <div className="flex gap-6">
-              <div className="border-coral-red rounded-xl border-2 hover:cursor-pointer">
-                <div className="bg-card flex h-40 w-40 items-center justify-center bg-cover bg-center">
-                  <img src={thumbnailShoe1} alt="" />
+            <div className="flex gap-6 max-sm:px-6">
+              <div className="border-coral-red bg-card rounded-xl border-2 bg-cover bg-center hover:cursor-pointer max-sm:flex-1">
+                <div className="flex items-center justify-center p-4">
+                  <img
+                    src={thumbnailShoe1}
+                    alt=""
+                    className="object-contain"
+                    width={127}
+                    height={103.34}
+                  />
                 </div>
               </div>
-              <div className="rounded-xl border-2 border-transparent hover:cursor-pointer">
-                <div className="bg-card flex h-40 w-40 items-center justify-center bg-cover bg-center">
-                  <img src={thumbnailShoe2} alt="" />
+              <div className="bg-card rounded-xl border-2 border-transparent bg-cover bg-center hover:cursor-pointer max-sm:flex-1">
+                <div className="flex items-center justify-center p-4">
+                  <img
+                    src={thumbnailShoe2}
+                    alt=""
+                    className="object-contain"
+                    width={127}
+                    height={103.34}
+                  />
                 </div>
               </div>
-              <div className="rounded-xl border-2 border-transparent hover:cursor-pointer">
-                <div className="bg-card flex h-40 w-40 items-center justify-center bg-cover bg-center">
-                  <img src={thumbnailShoe3} alt="" />
+              <div className="bg-card rounded-xl border-2 border-transparent bg-cover bg-center hover:cursor-pointer max-sm:flex-1">
+                <div className="flex items-center justify-center p-4">
+                  <img
+                    src={thumbnailShoe3}
+                    alt=""
+                    className="object-contain"
+                    width={127}
+                    height={103.34}
+                  />
                 </div>
               </div>
             </div>

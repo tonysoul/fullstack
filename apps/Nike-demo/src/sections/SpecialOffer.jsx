@@ -6,7 +6,7 @@ const SpecialOffer = () => {
   return (
     <section id="SpecialOffer">
       <div className="max-container">
-        <div className="flex items-center justify-between gap-10 px-6 py-24">
+        <div className="flex flex-col-reverse items-center justify-between gap-10 px-16 py-24 max-sm:px-8 xl:flex-row">
           <div className="flex-1">
             <img src={offer} alt="" />
           </div>

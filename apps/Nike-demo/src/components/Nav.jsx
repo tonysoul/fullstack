@@ -4,13 +4,13 @@ import { navLinks } from "../constants";
 
 const Nav = () => {
   return (
-    <header className="absolute w-full">
+    <header className="absolute z-10 w-full">
       <div className="max-container">
-        <nav className="flex items-center justify-between px-6 py-8">
+        <nav className="flex items-center justify-between px-16 py-8 max-sm:px-8">
           <a href="#">
             <img src={headerLogo} alt="logo" />
           </a>
-          <ul className="font-montserrat hidden space-x-16 text-lg text-gray-500 lg:flex">
+          <ul className="font-montserrat hidden space-x-10 text-lg text-gray-500 lg:flex">
             {navLinks.map((item) => (
               <li key={item.label}>
                 <a href={item.href}>{item.label}</a>

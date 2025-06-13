@@ -3,8 +3,8 @@ const Services = () => {
   return (
     <section id="Services">
       <div className="max-container">
-        <div className="flex justify-between gap-10 px-6 py-24">
-          <div className="shadow-3xl rounded-2xl p-14 px-10">
+        <div className="flex flex-wrap justify-between gap-10 px-16 py-24 max-sm:px-8">
+          <div className="shadow-3xl min-w-[350px] flex-1 rounded-2xl p-14 px-10">
             <div className="bg-coral-red mb-5 inline-block rounded-full p-3">
               <img src={truckFast} alt="" />
             </div>
@@ -14,7 +14,7 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="shadow-3xl rounded-2xl p-14 px-10">
+          <div className="shadow-3xl min-w-[350px] flex-1 rounded-2xl p-14 px-10">
             <div className="bg-coral-red mb-5 inline-block rounded-full p-3">
               <img src={shieldTick} alt="" />
             </div>
@@ -25,7 +25,7 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="shadow-3xl rounded-2xl p-14 px-10">
+          <div className="shadow-3xl min-w-[350px] flex-1 rounded-2xl p-14 px-10">
             <div className="bg-coral-red mb-5 inline-block rounded-full p-3">
               <img src={support} alt="" />
             </div>

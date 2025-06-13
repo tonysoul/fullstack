@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <section id="Footer" className="bg-black text-slate-300">
       <div className="max-container">
-        <div className="p-6 py-24">
-          <div className="flex gap-20">
+        <div className="p-16 py-24 max-sm:p-8">
+          <div className="flex flex-col gap-20 lg:flex-row">
             <div>
               <a href="/">
                 <img width={150} height={46} src={footerLogo} alt="logo" />
@@ -27,7 +27,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-1 justify-between">
+            <div className="flex flex-1 flex-wrap justify-between gap-20 lg:gap-10">
               <div>
                 <h4 className="font-montserrat mb-6 text-2xl font-medium text-white">
                   Products
@@ -93,8 +93,8 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="mt-24 flex justify-between">
-            <div>&copy; copyright sign Copyright. All rights reserved.</div>
+          <div className="mt-24 flex flex-col justify-between text-center sm:flex-row">
+            <div>&copy; Copyright. All rights reserved.</div>
             <div>Terms & Conditions</div>
           </div>
         </div>

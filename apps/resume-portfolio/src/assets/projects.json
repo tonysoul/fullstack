@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Todo App",
+    "desc": "A simple todo list application for managing tasks.",
+    "url": "https://example.com/todo"
+  },
+  {
+    "title": "Weather Dashboard",
+    "desc": "A weather dashboard that provides current weather information.",
+    "url": "https://example.com/weather"
+  }
+]

@@ -1,29 +1,60 @@
+import { useState } from "react";
+import { hamburger } from "./assets/icons";
 import { photo } from "./assets/images";
+import { navLinks } from "./constants";
 
 const App = () => {
+  const [isShowMenu, setIsShowMenu] = useState(false);
+
+  const handleClick = () => {
+    setIsShowMenu(!isShowMenu);
+  };
+
+  const handleMenuClick = () => {
+    console.log(123);
+    setIsShowMenu(false);
+  };
+
   return (
     <main>
       {/* Nav */}
-      <header className="bg-white shadow">
+      <header className="relative bg-white shadow">
         <div className="max-container flex justify-between">
           <h1 className="text-xl font-bold">
             <a className="hover:text-blue-500" href="/">
               Tony Soul
             </a>
           </h1>
-          <nav className="flex gap-10">
-            <a className="hover:text-blue-500" href="#about">
-              About
-            </a>
-            <a className="hover:text-blue-500" href="#skills">
-              Skills
-            </a>
-            <a className="hover:text-blue-500" href="#projects">
-              Projects
-            </a>
-            <a className="hover:text-blue-500" href="#contact">
-              Contact
-            </a>
+          <nav className="hidden md:flex md:gap-10">
+            {navLinks.map((link) => (
+              <a className="hover:text-blue-500" href={link.href}>
+                {link.label}
+              </a>
+            ))}
+          </nav>
+          <img
+            onClick={handleClick}
+            className="hidden max-md:block"
+            src={hamburger}
+            alt="hamburger icon"
+            width={25}
+            height={25}
+          />
+        </div>
+        <div
+          id="menu"
+          className={`absolute top-[60px] left-0 ${isShowMenu ? "" : "hidden"} w-full border-t border-gray-300 bg-white shadow`}
+        >
+          <nav className="flex flex-col items-center justify-center gap-2 text-center">
+            {navLinks.map((link) => (
+              <a
+                onClick={handleMenuClick}
+                className="w-full py-6 hover:text-blue-500"
+                href={link.href}
+              >
+                {link.label}
+              </a>
+            ))}
           </nav>
         </div>
       </header>
@@ -88,7 +119,7 @@ const App = () => {
       <section id="projects">
         <div className="max-container border-t border-gray-300 py-20">
           <h2 className="text-center">Projects</h2>
-          <div className="mt-10 grid grid-cols-3 gap-10">
+          <div className="mt-10 grid gap-10 sm:grid-cols-2 md:grid-cols-3">
             <div className="rounded-xl border border-gray-300 p-6">
               <h3 className="text-lg font-semibold">Todo App</h3>
               <p className="mt-2 min-h-[72px] text-slate-500">
